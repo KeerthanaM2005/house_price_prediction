@@ -49,14 +49,14 @@ print("Saved predictions to submission.csv")
 
 # 8. Predict for one example house (hard-coded)
 # Example details:
-# - size: 1800 sq ft
-# - 3 bedrooms
-# - 2 full bathrooms
-# - 7 total rooms
+# - size: 2500 sq ft
+# - 4 bedrooms
+# - 3 full bathrooms
+# - 6 total rooms
 # - neighborhood: CollgCr
 example_neighborhood = "CollgCr"
 example_neighborhood_index = le.transform([example_neighborhood])[0]
 
-example_data = [[1800, 3, 2, 7, example_neighborhood_index]]
+example_data = [[2500, 4, 3, 6, example_neighborhood_index]]
 example_price = model.predict(example_data)
 print("Predicted price for example house:", example_price[0])
